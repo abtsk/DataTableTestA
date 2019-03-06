@@ -2,7 +2,7 @@
     'データ保持
     Private dtForm As DataTable
 
-    '列定義　キー値
+    '列定義　キー値 Update/Insertのitem名として利用
     Private Enum CN
         LOT_NO
         PROD_NM
@@ -20,6 +20,7 @@
         {CN.MAX_CARTON_QTY, "MAXカートン数量"}
     }
 
+    '使わない？　すべてロットNoキーで取得できるため、引数として渡す必要なし SelectTagで取得可
     Private Structure COL_NAME
         Public LOT_NO As String
         Public PROD_NM As String
